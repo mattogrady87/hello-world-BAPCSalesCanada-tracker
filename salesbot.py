@@ -22,18 +22,13 @@ def run_bot(r):
     print("Obtaining new posts from " + sub)
     for submission in r.subreddit(sub).new(limit=100):
         if "gtx" in submission.title.lower() and ("1080" in submission.title or "1070" in submission.title): 
-            print(submission.title)
-            print(submission.url)
-            print("\n")
             myList.append(submission)
 
-            if submission.title not in fobj:
-                fobj.write(strftime("%B %d %Y", localtime(submission.created)) + "\n")
-                fobj.write(submission.title + "\n")
-                fobj.write(submission.url + "\n\n")
-
     for submission in myList:
-        print(count, submission.title)
+        fobj.write(str(count) + ". ")
+        fobj.write(submission.title + "\n")
+        fobj.write(strftime("%B %d %Y", localtime(submission.created))+ "\n")
+        fobj.write(submission.url + "\n\n")
         count += 1
 
 r = bot_login()
