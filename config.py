@@ -1,3 +1,3 @@
-client_id = "Dz3FqP-QcdHEgg"
-client_secret = "M8M4ESRRrqK0ipO0XAsA68zB5Hw"
+client_id = "XXXXqP-QcdHEgg"
+client_secret = "XXXXESRRrqK0ipO0XAsA68zB5Hw"
 
