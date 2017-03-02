@@ -27,7 +27,7 @@ def run_bot(r):
     for submission in myList:
         fobj.write(str(count) + ". ")
         fobj.write(submission.title + "\n")
-        fobj.write(strftime("%B %d %Y", localtime(submission.created))+ "\n")
+        fobj.write(strftime("%B %d %Y @ %-I:%M %p", localtime(submission.created))+ "\n")
         fobj.write(submission.url + "\n\n")
         count += 1
 
